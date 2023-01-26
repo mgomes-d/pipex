@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgomes-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 13:32:36 by mgomes-d          #+#    #+#             */
-/*   Updated: 2022/10/21 15:33:19 by mgomes-d         ###   ########.fr       */
+/*   Updated: 2023/01/25 12:16:03 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_printf(const char *format, ...)
 	va_start(args, format);
 	i = 0;
 	count = 0;
-	while (i < ft_strlen((char *)format))
+	while (i < ft_strlenint((char *)format))
 	{
 		if (format[i] == '%')
 		{

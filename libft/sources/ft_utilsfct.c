@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utilsfct.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgomes-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 14:09:56 by mgomes-d          #+#    #+#             */
-/*   Updated: 2022/10/21 15:33:39 by mgomes-d         ###   ########.fr       */
+/*   Updated: 2023/01/25 12:15:27 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,13 @@ int	ft_putchar(char c)
 	return (1);
 }
 
-int	ft_strlen(char *str)
+int		ft_strlenint(char *str)
 {
 	int	i;
 
 	i = 0;
+	if (!str)
+		return (0);
 	while (str[i])
 		i++;
 	return (i);

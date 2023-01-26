@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgomes-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 09:46:20 by mgomes-d          #+#    #+#             */
-/*   Updated: 2022/10/13 10:52:21 by mgomes-d         ###   ########.fr       */
+/*   Updated: 2023/01/25 10:54:26 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	ptr = (char *)dst;
 	ptr2 = (char *)src;
-	if (len < 0)
-		return (NULL);
 	if (ptr > ptr2)
 	{
 		while (len)

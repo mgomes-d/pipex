@@ -6,7 +6,7 @@
 #    By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 10:35:04 by mgomes-d          #+#    #+#              #
-#    Updated: 2023/01/23 12:27:41 by mgomes-d         ###   ########.fr        #
+#    Updated: 2023/01/25 11:27:36 by mgomes-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,8 @@ HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 # SOURCES
 SOURCES_DIRECTORY = ./src/
 SOURCES_LIST = pipex.c \
-			   parsing.c
+			   parsing.c \
+			   pipex_utils.c
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 
 # OBJECTS

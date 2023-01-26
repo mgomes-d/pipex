@@ -6,7 +6,7 @@
 /*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:43:59 by mgomes-d          #+#    #+#             */
-/*   Updated: 2023/01/20 08:44:02 by mgomes-d         ###   ########.fr       */
+/*   Updated: 2023/01/25 10:59:20 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -23,7 +24,7 @@ typedef struct s_list
 }					t_list;
 
 int		ft_printf(const char *format, ...);
-int		ft_atoi(const char *str, int *error);
+int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int c);

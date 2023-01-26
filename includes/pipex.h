@@ -6,7 +6,7 @@
 /*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:38:43 by mgomes-d          #+#    #+#             */
-/*   Updated: 2023/01/23 12:30:41 by mgomes-d         ###   ########.fr       */
+/*   Updated: 2023/01/26 09:57:18 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 typedef struct s_pipex
 {
-	char *allpath;
+	char	**allpath;
 }	t_pipex;
 
 # include <stdio.h>
@@ -28,5 +28,7 @@ typedef struct s_pipex
 # include <sys/wait.h>
 # include <signal.h>
 
+void	ft_parsing_env(char **env, t_pipex *data);
+void	ft_writestr(int fd, const char *str);
 
 #endif
