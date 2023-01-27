@@ -6,7 +6,7 @@
 /*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:38:43 by mgomes-d          #+#    #+#             */
-/*   Updated: 2023/01/26 09:57:18 by mgomes-d         ###   ########.fr       */
+/*   Updated: 2023/01/27 10:44:09 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ typedef struct s_pipex
 # include <sys/wait.h>
 # include <signal.h>
 
-void	ft_parsing_env(char **env, t_pipex *data);
-void	ft_writestr(int fd, const char *str);
+char	*ft_parsing_path(char **env, char *cmd);
+void	ft_child_process(char **arg, char **env, int *pipefd);
+void	ft_parent_process(char **arg, char **env, int *pipefd);
+
 
 #endif
