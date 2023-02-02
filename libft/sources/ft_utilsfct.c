@@ -6,7 +6,7 @@
 /*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 14:09:56 by mgomes-d          #+#    #+#             */
-/*   Updated: 2023/01/25 12:15:27 by mgomes-d         ###   ########.fr       */
+/*   Updated: 2023/02/02 08:37:22 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_putchar(char c)
 	return (1);
 }
 
-int		ft_strlenint(char *str)
+int	ft_strlenint(char *str)
 {
 	int	i;
 

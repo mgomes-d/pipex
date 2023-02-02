@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.h                                            :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/20 10:38:43 by mgomes-d          #+#    #+#             */
-/*   Updated: 2023/01/31 11:03:16 by mgomes-d         ###   ########.fr       */
+/*   Created: 2022/10/21 15:47:35 by mgomes-d          #+#    #+#             */
+/*   Updated: 2023/01/18 13:16:44 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PIPEX_H
-# define PIPEX_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-# include "libft.h"
-# include <stdio.h>
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
 
 # include <unistd.h>
-# include <fcntl.h>
 # include <stdlib.h>
-# include <sys/wait.h>
-# include <signal.h>
+# include <limits.h>
 
-char	*ft_parsing_path(char **env, char *cmd);
-void	ft_child_process(char **arg, char **env, int *pipefd);
-void	ft_parent_process(char **arg, char **env, int *pipefd);
-void	ft_executation(char *arg, char **env);
+char	*get_next_line(int fd);
+int		ft_not_nl_static(char *str);
+char	*ft_strjoingnl(char *str1, char *str2);
+char	*ft_free_all(char **str1);
 
 #endif

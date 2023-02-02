@@ -6,7 +6,7 @@
 /*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 12:27:01 by mgomes-d          #+#    #+#             */
-/*   Updated: 2023/01/27 09:08:07 by mgomes-d         ###   ########.fr       */
+/*   Updated: 2023/02/01 09:30:18 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char	*ft_return_path(char **allpaths, char *path)
 {
 	int	i;
 
-	if (!*allpaths || !allpaths)
+	if (!*allpaths || !allpaths || !path)
 		return (NULL);
 	i = -1;
 	while (allpaths[++i])

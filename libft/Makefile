@@ -6,7 +6,7 @@
 #    By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 17:01:49 by mgomes-d          #+#    #+#              #
-#    Updated: 2023/01/05 10:19:45 by mgomes-d         ###   ########.fr        #
+#    Updated: 2023/02/02 08:38:07 by mgomes-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ RMFLAGS	= -rf
 
 # HEADERS
 HEADERS_LIST = libft.h \
-				ft_printf.h
+				ft_printf.h \
+				get_next_line.h
 HEADERS_DIRECTORY = ./includes/
 HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 INCLUDES = -I$(HEADERS_DIRECTORY)
@@ -73,7 +74,9 @@ SOURCES_LIST = ft_atoi.c \
 		  convert_base.c \
 		  ft_printf.c \
 		  ft_utilsfct.c \
-		  ft_issymbol.c
+		  ft_issymbol.c \
+		  get_next_line.c \
+		  get_next_line_utils.c
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 
 # OBJECTS

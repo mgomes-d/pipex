@@ -6,7 +6,7 @@
 #    By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 10:35:04 by mgomes-d          #+#    #+#              #
-#    Updated: 2023/01/25 11:27:36 by mgomes-d         ###   ########.fr        #
+#    Updated: 2023/02/02 10:37:42 by mgomes-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,12 +38,19 @@ SOURCES_DIRECTORY = ./src/
 SOURCES_LIST = pipex.c \
 			   parsing.c \
 			   pipex_utils.c
+SOURCES_LIST_BONUS = pipex_bonus.c \
+					 pipex_utils_bonus.c \
+					 parsing.c
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
+
+SOURCES_BONUS = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST_BONUS))
 
 # OBJECTS
 OBJECTS_DIRECTORY = objects/
 OBJECTS_LIST = $(patsubst %.c, %.o, $(SOURCES_LIST))
 OBJECTS	= $(addprefix $(OBJECTS_DIRECTORY), $(OBJECTS_LIST))
+OBJECTS_LIST_BONUS = $(patsubst %.c, %.o, $(SOURCES_LIST_BONUS))
+OBJECTS_BONUS = $(addprefix $(OBJECTS_DIRECTORY), $(OBJECTS_LIST_BONUS))
 
 # COLOR FLAGS
 CLR_BLACK   = \033[0;30m
@@ -60,6 +67,11 @@ $(NAME): $(LIBFT) $(OBJECTS_DIRECTORY) $(OBJECTS)
 	@$(CC) $(CFLAGS) $(LIBRARIES) $(INCLUDES) $(OBJECTS) -o $(NAME)
 	@echo "\n$(NAME): $(CLR_GREEN)objects were created$(CLR_RESET)"
 	@echo "$(NAME): $(CLR_GREEN)$(NAME) was created$(CLR_RESET)"
+
+bonus: $(LIBFT) $(OBJECTS_DIRECTORY) $(OBJECTS_BONUS)
+	@$(CC) $(CFLAGS) $(LIBRARIES) $(INCLUDES) $(OBJECTS_BONUS) -o $(NAME)
+	@echo "\n$(NAME): $(CLR_GREEN)Bonus objects were created$(CLR_RESET)"
+	@echo "$(NAME): $(CLR_GREEN)$(NAME) Bonus was created$(CLR_RESET)"
 
 $(OBJECTS_DIRECTORY):
 	@mkdir -p $(OBJECTS_DIRECTORY)
@@ -84,7 +96,7 @@ fclean: clean
 	@echo "$(NAME): $(CLR_RED)$(LIBFT) was deleted$(CLR_RESET)"
 	@$(RM) $(RMFLAGS) $(NAME)
 	@echo "$(NAME): $(CLR_RED)$(NAME) was deleted$(CLR_RESET)"
-
+	
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

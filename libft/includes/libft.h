@@ -6,7 +6,7 @@
 /*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:43:59 by mgomes-d          #+#    #+#             */
-/*   Updated: 2023/01/25 10:59:20 by mgomes-d         ###   ########.fr       */
+/*   Updated: 2023/02/02 08:34:42 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+char	*get_next_line(int fd);
 int		ft_printf(const char *format, ...);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
