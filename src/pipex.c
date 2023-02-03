@@ -6,7 +6,7 @@
 /*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:37:18 by mgomes-d          #+#    #+#             */
-/*   Updated: 2023/02/03 10:06:17 by mgomes-d         ###   ########.fr       */
+/*   Updated: 2023/02/03 10:49:01 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int ac, char **av, char **env)
 	if (ac != 5)
 	{
 		ft_putstr_fd("$RES_REAL: ambiguous redirect\n", 2);
-		return (1);
+		return (EXIT_FAILURE);
 	}
 	if (pipe(pipefd) == -1)
 	{
