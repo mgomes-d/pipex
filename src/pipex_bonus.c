@@ -6,13 +6,13 @@
 /*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 10:58:49 by mgomes-d          #+#    #+#             */
-/*   Updated: 2023/02/03 09:44:47 by mgomes-d         ###   ########.fr       */
+/*   Updated: 2023/02/03 10:43:59 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-void	ft_executation_b(char *arg, char **env)
+static void	ft_executation_b(char *arg, char **env)
 {
 	char	*path;
 	char	**cmd;
@@ -36,7 +36,7 @@ void	ft_executation_b(char *arg, char **env)
 	}
 }
 
-void	ft_process(char *av, char **env)
+static void	ft_process(char *av, char **env)
 {
 	int		pipefd[2];
 	pid_t	pid;

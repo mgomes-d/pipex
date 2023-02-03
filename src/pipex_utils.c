@@ -6,13 +6,13 @@
 /*   By: mgomes-d <mgomes-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 11:25:55 by mgomes-d          #+#    #+#             */
-/*   Updated: 2023/02/03 10:05:51 by mgomes-d         ###   ########.fr       */
+/*   Updated: 2023/02/03 10:44:42 by mgomes-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-void	ft_executation(char *arg, char **env)
+static void	ft_executation(char *arg, char **env)
 {
 	char	*path;
 	char	**cmd;
